@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Robô Aventureiro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">MISSÃO GALÁCTICA</p>
+        <h1>🤖 Robô Aventureiro</h1>
+      </div>
+      <button id="restartBtn" class="small-button" type="button">↻ Reiniciar</button>
+    </header>
+
+    <section class="hud" aria-label="Status do jogo">
+      <div class="stat"><span>FASE</span><strong id="levelValue">1 / 3</strong></div>
+      <div class="stat"><span>MOEDAS</span><strong>🪙 <b id="coinValue">0</b></strong></div>
+      <div class="stat"><span>VIDAS</span><strong id="lifeValue">❤️❤️❤️</strong></div>
+      <div class="stat"><span>OBJETIVO</span><strong id="goalValue">0 / 5</strong></div>
+    </section>
+
+    <div class="canvas-wrap">
+      <canvas id="game" width="960" height="540" aria-label="Jogo de plataforma com robô"></canvas>
+      <div id="overlay" class="overlay">
+        <div class="overlay-card">
+          <div id="overlayIcon" class="big-icon">🤖</div>
+          <h2 id="overlayTitle">Pronto para a missão?</h2>
+          <p id="overlayText">Colete as moedas, pule os perigos e chegue ao portal brilhante!</p>
+          <button id="overlayBtn" class="primary-button" type="button">Começar a jogar</button>
+        </div>
+      </div>
+    </div>
+
+    <footer class="help">
+      <div><kbd>←</kbd> <kbd>→</kbd> ou <kbd>A</kbd> <kbd>D</kbd> <span>mover</span></div>
+      <div><kbd>ESPAÇO</kbd> <span>pular</span></div>
+      <div><kbd>R</kbd> <span>reiniciar fase</span></div>
+    </footer>
+    <div class="mobile-controls">
+      <button id="leftBtn" aria-label="Mover para esquerda">◀</button>
+      <button id="jumpBtn" aria-label="Pular">⬆ PULAR</button>
+      <button id="rightBtn" aria-label="Mover para direita">▶</button>
+    </div>
+    <p class="tip">Dica: pegue todas as moedas da fase para ativar o portal. Cuidado com os robôs inimigos e os espinhos!</p>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>
